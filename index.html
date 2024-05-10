@@ -1,112 +1,253 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<title>Cave Art Multimedia</title>
+<style>
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter.ttf') format('truetype');
+}
 
-    <style>
-        
-        body {
-            font-family: Lato;
-            background-color: purple;
-            margin: 0px;
-            font-size: 14pt;
-        }
+@font-face {
+    font-family: 'FugazOne';
+    src: url('FugazOne.ttf') format('truetype');
+}
 
-        .header {
-            position: relative;
-            display: flex;
-            justify-content: center; /* Centers the middle section's content */
-            align-items: center;
-            height: 60px;
-            background-color: #f0f0f0;
-        }
+body {
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+    font-size: 20px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
 
-        .header-section {
-            display: flex;
-            align-items: center;
-        }
+.spacer {
+	width: 100%;
+	height: 10px;
+	background-color:transparent;
+}
 
-        .header-logo, .header-social {
-            position: absolute;
-        }
+.content {
+	background-color: transparent;
+	width: 1000px;
+	max-width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box; /* Ensures padding is included within the width */
+}
 
-        .header-logo {
-            left: 0; /* Aligns the logo to the left */
-        }
+.header {
+	width: 1000px;
+	height: 80px;
+	border-bottom: 4px solid black;
+	background-color: white;
+	padding: 0 10px; /* Adjust padding to avoid affecting height */
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between; /* Ensure space distribution */
+}
 
-        .header-social {
-            right: 0; /* Aligns the social links to the right */
-        }
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex: 1;
+}
 
-        .header-links a, .header-social a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-        }
+.logo {
+	width: 236px;
+	height: 50px;
+	display:block;
+}
 
-        .header-logo img {
-            height: 60px;
-        }
+.tabs {
+	display: flex;
+	gap: 20px; /* Space between tabs */
+	justify-content: center; /* Center tabs */
+	flex: 2;
+}
 
-        /* Video styling */
-        .video-container video {
-            width: 100%; /* Spans the full width of the viewport */
-            height: calc(100vh - 60px); /* Takes up the remaining height of the viewport minus the header */
-            object-fit: cover; /* Ensures there are no black bars */
-        }
+.tabs a {
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+}
 
-    </style>
+.order-button-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+.order-button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.title {
+	font-family: 'FugazOne', sans-serif;
+	font-size: 90px;
+	line-height: 120px;
+	text-align: left;
+}
+
+.hero-photo {
+	margin: 0px;
+	padding: 0px;
+	display: block; /* Removes any inline spacing */
+	width: 100%; /* Ensure it fits within the parent */
+}
+
+.description {
+	line-height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+
+.subheading {
+	font-family: 'FugazOne', sans-serif;
+	font-size: 47px;
+	height: 100px;
+	display: flex;
+	align-items: center; /* Center text vertically */
+	justify-content: flex-start; /* Align text to the left horizontally */
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+
+.footer {
+	width: 1000px;
+	height: 80px;
+	border-top: 4px solid black;
+	background-color: white;
+	padding: 0 10px; /* Adjust padding to avoid affecting height */
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between; /* Ensure space distribution */
+}
+</style>
 
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-section header-logo">
-          <!-- Place your logo here -->
-          <img src="logo.png" alt="Logo" style="height: 60px; padding-left: 40px;">
-        </div>
-        <div class="header-section header-links">
-          <!-- Navigation Links -->
-          <a href="/">Home</a>
-          <a href="/pre-order">Pre-order</a>
-          <a href="/updates">Updates</a>
-          <a href="/diy-kit">DIY Kit</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div class="header-section header-social">
-          <!-- Social Media Links -->
-          <a href="https://twitter.com">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M 2.3671875 3 L 9.4628906 13.140625 L 2.7402344 21 L 5.3808594 21 L 10.644531 14.830078 L 14.960938 21 L 21.871094 21 L 14.449219 10.375 L 20.740234 3 L 18.140625 3 L 13.271484 8.6875 L 9.2988281 3 L 2.3671875 3 z M 6.2070312 5 L 8.2558594 5 L 18.033203 19 L 16.001953 19 L 6.2070312 5 z"></path>
-            </svg>
-          </a>
-          <a href="https://instagram.com">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"></path>
-            </svg>
-          </a>
-          <a href="https://etsy.com" style="padding-right: 40px;">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.2,1H4V5H5A2,2,0,0,1,7,7V17a2,2,0,0,1-2,2H4v4H21.2L23,14.727H20.3l-.869,2.855A2,2,0,0,1,17.518,19H13a2,2,0,0,1-2-2V14h2c1.105,0,2-.105,2,1h2V9H15c0,1.105-.895,1-2,1H11V7a2,2,0,0,1,2-2h5a2,2,0,0,1,2,2h2l1-6Z"></path>
-            </svg>
-          </a>
-          <!-- Add more as needed -->
-        </div>
-      </div>
 
-      <div class="video-container">
-        <video autoplay loop muted>
-            <source src="demo-slow.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<div class="header">
+    <!-- Logo on the left -->
+    <div class="logo-container">
+        <a href="index.html" style="display: inline-block;"><img src="logo.png" class="logo" /></a>
     </div>
 
-    <br/>
+    <!-- Tabs in the center -->
+    <nav class="tabs">
+        <a href="#about">About</a>
+        <a href="#videos">Videos</a>
+        <a href="#downloads">Downloads</a>
+    </nav>
 
-    <span>
-    Introducing the Cave Art Mosaic: a magical USB keyboard that instantly transforms the notes you play into dazzling harmonies and melodies, making it feel like you're conducting an orchestra with the touch of a button, perfect for anyone who loves music.
-    </span>
+    <!-- Order button on the right side -->
+    <div class="order-button-container">
+        <a target="_blank" href="https://etsy.com"><button class="order-button">Order on Etsy</button></a>
+    </div>
+</div>
+
+<div class="content">
+
+	<div class="spacer"></div>
+
+	<div class="title">
+	CHORDOMATIC MIDI KEYBOARD
+	</div>
+
+	<div class="spacer"></div>
+
+	<img src="hero.png" class="hero-photo" />
+
+	<div class="spacer"></div>
+	
+	<div class="subheading" id="about">
+	ABOUT
+	</div>
+
+	<div class="spacer"></div>
+
+	<div class="description">
+	The Chordomatic is a MIDI keyboard that can play layers of harmonies based on the notes you play and the key you’re in, offering a new approach to melodic and chordal composition.
+	<br/>
+	<br/>
+	<b>Features:</b>
+	<ul>
+		<li>Monophonic</li>
+		<li>Key selection knob</li>
+		<li>Major/minor mode selection</li>
+		<li>Octave shifting</li>
+		<li>Harmonic spread alteration features, with the option to randomize</li>
+		<li>A velocity knob that goes up to 11</li>
+		<li>USB port for connectivity with any DAW</li>
+		<li>Available in black, silver, blue, green, red, and yellow</li>
+	</ul>
+	Assembly and testing is done by hand in Toronto, Ontario. Due to inventory costs, this product is made upon order. Please allow for up to 2 months for your order to be manufactured and shipped. I will send frequent updates and if at any point you have any additional concerns, please send an email to <a href="mailto:me@sava.solar">me@sava.solar</a>.
+	</div>
+	
+	<div class="spacer"></div>
+
+	<div class="subheading" id="videos">
+	VIDEOS
+	</div>
+
+	<div class="spacer"></div>
+
+	<iframe width="980" height="600" style="display: block;" src="https://www.youtube.com/embed/Y_-1l_SlA7c?si=mZj6l1krDcOeuTd7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	<div class="spacer"></div>
+	
+	Prev. video, next video controls
+	
+	<div class="spacer"></div>
+	
+	<div class="subheading" id="downloads">
+	DOWNLOADS
+	</div>
+	
+	<div class="spacer"></div>
+	
+	<div class="description">
+	Below are some resources to help you get started with the Chordomatic, as well as some open-source materials for anyone who wants to make their own programmable MIDI keyboard.
+	<ul>
+		<li><a href="#">Startup Guide (.pdf)</a></li>
+		<li><a href="#">DIY MIDI Keyboard Guide (.pdf)</a></li>
+		<li><a href="#">3D Design Files (.zip)</a></li>
+	</ul>
+	Check back in for more updates soon!
+	</div>
+	
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+<div class="footer">
+	<span style="font-size:14px">© Cave Art Multimedia, Inc.</span>
+</div>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+
 
 </body>
-
 </html>
