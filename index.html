@@ -18,14 +18,14 @@ body {
 	font-family: 'Inter', sans-serif;
     font-size: 20px;
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	align-items: center;
 }
 
 .spacer {
 	width: 100%;
 	height: 10px;
-	background-color:transparent;
+	background-color: transparent;
 }
 
 .content {
@@ -59,7 +59,7 @@ body {
 .logo {
 	width: 236px;
 	height: 50px;
-	display:block;
+	display: block;
 }
 
 .tabs {
@@ -99,7 +99,7 @@ body {
 	text-align: left;
 }
 
-.hero-photo {
+.hero-media {
 	margin: 0px;
 	padding: 0px;
 	display: block; /* Removes any inline spacing */
@@ -156,7 +156,9 @@ body {
 
     <!-- Order button on the right side -->
     <div class="order-button-container">
-        <a target="_blank" href="https://etsy.com"><button class="order-button">Order on Etsy</button></a>
+		<!-- Add different links for different regions -->
+		<!-- If not in canada, the href should be "#usd"; in Canada, it should be "#cad" -->
+        <a target="_blank" id="order-link" href="https://etsy.me/3wIloDi"><button class="order-button">Order on Etsy</button></a>
     </div>
 </div>
 
@@ -170,7 +172,8 @@ body {
 
 	<div class="spacer"></div>
 
-	<img src="IMG_0462.jpeg" class="hero-photo" />
+	<!-- Replacing the image with a video -->
+	<video src="loop.mp4" class="hero-media" autoplay loop muted playsinline></video>
 
 	<div class="spacer"></div>
 	
@@ -208,6 +211,8 @@ body {
 
 	<iframe width="980" height="551" style="display: block;" src="https://www.youtube.com/embed/auj3b71kq3k?si=7AdgJcNFLjtpQHrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	
+	<div class="spacer"></div>
+
 	<div class="subheading" id="downloads">
 	DOWNLOADS
 	</div>
@@ -242,6 +247,25 @@ body {
 <div class="spacer"></div>
 <div class="spacer"></div>
 
+<!-- <script>
+	document.addEventListener('DOMContentLoaded', function () {
+		fetch('http://ip-api.com/json')
+			.then(response => response.json())
+			.then(data => {
+				const orderLink = document.getElementById('order-link');
+				if (data.countryCode === 'CA') {
+					orderLink.href = '#cad';
+				} else {
+					orderLink.href = '#usd';
+				}
+			})
+			.catch(error => {
+				console.error('Error fetching IP data:', error);
+				// Fallback href in case of an error
+				document.getElementById('order-link').href = '#usd';
+			});
+	});
+</script> -->
 
 </body>
 </html>
