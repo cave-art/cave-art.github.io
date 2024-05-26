@@ -136,6 +136,42 @@ body {
 	box-sizing: border-box;
 	justify-content: space-between; /* Ensure space distribution */
 }
+
+.images-container {
+    display: flex;
+    gap: 10px; /* Space between images */
+}
+
+.images-container a {
+    width: calc(33.33% - 10px); /* Adjust the width to fit 3 items with the gap */
+    display: block; /* Make anchors behave as block elements */
+}
+
+.images-container img {
+    width: 100%; /* Make the image fill the parent anchor */
+    height: auto;
+    display: block;
+}
+
+/* Styles for the 3x3 grid */
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px; /* Space between grid items */
+	list-style-type: disc; /* Keep bullet points */
+	padding: 0;
+	margin: 0; /* Remove default margin */
+}
+
+.features-grid li {
+	padding: 10px;
+	list-style-position: inside;
+}
+
+.features-graphic {
+	width: 100%; /* Make the width 100% to match the hero-media element */
+	display: block;
+}
 </style>
 
 </head>
@@ -151,7 +187,7 @@ body {
     <nav class="tabs">
         <a href="#about">About</a>
         <a href="#demo">Demo</a>
-        <a href="#downloads">Downloads</a>
+        <a href="#features">Features</a>
     </nav>
 
     <!-- Order button on the right side -->
@@ -176,58 +212,46 @@ body {
 	<video src="loop.mp4" class="hero-media" autoplay loop muted playsinline></video>
 
 	<div class="spacer"></div>
+	<div class="spacer"></div>
 	
 	<div class="subheading" id="about">
 	ABOUT
 	</div>
 
-	<div class="spacer"></div>
-
 	<div class="description">
 	The Reharmonizer is a MIDI keyboard that can play layers of harmonies based on the notes you play and the key you’re in, offering a new approach to melodic and chordal composition.
-	<br/>
-	<br/>
-	<b>Features:</b>
-	<ul>
-		<li>Monophonic</li>
-		<li>Key selection knob</li>
-		<li>Major/minor mode selection</li>
-		<li>Octave shifting</li>
-		<li>Harmonic spread alteration features, with the option to randomize</li>
-		<li>A velocity knob that goes up to 11</li>
-		<li>USB port for connectivity with any DAW</li>
-		<li>Available in black, silver, blue, green, red, and yellow</li>
-	</ul>
-	Assembly and testing is done by hand in Toronto, Ontario. Due to inventory costs, this product is made upon order. Please allow for up to 2 months for your order to be manufactured and shipped. I will send frequent updates and if at any point you have any additional concerns, please send an email to <a href="mailto:me@sava.solar">me@sava.solar</a>.
 	</div>
-	
+
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+
+	<div class="images-container">
+		<a target="_blank" href="content01.jpeg"><img src="content01.jpeg" alt="Image 1"/></a>
+		<a target="_blank" href="content02.jpeg"><img src="content02.jpeg" alt="Image 2"/></a>
+		<a target="_blank" href="content03.jpeg"><img src="content03.jpeg" alt="Image 3"/></a>
+	</div>
+
 	<div class="spacer"></div>
 
 	<div class="subheading" id="demo">
 	DEMO
 	</div>
-
+	
 	<div class="spacer"></div>
-
+	
 	<iframe width="980" height="551" style="display: block;" src="https://www.youtube.com/embed/auj3b71kq3k?si=7AdgJcNFLjtpQHrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	
+		
 	<div class="spacer"></div>
 
-	<div class="subheading" id="downloads">
-	DOWNLOADS
-	</div>
-	
-	<div class="spacer"></div>
-	
 	<div class="description">
-	Below are some resources to help you get started with the Reharmonizer, as well as some open-source materials for anyone who wants to make their own programmable MIDI keyboard.
-	<ul>
-		<li><a href="#">Startup Guide (.pdf)</a></li>
-		<li><a href="#">DIY MIDI Keyboard Guide (.pdf)</a></li>
-		<li><a href="#">3D Design Files (.zip)</a></li>
-	</ul>
-	Check back in for more updates soon!
+		
 	</div>
+
+	<div class="subheading" id="features">
+	FEATURES
+	</div>
+
+	<img class="features-graphic" src="features-graphic.png"/>
 	
 	<div class="spacer"></div>
 	<div class="spacer"></div>
@@ -246,26 +270,6 @@ body {
 <div class="spacer"></div>
 <div class="spacer"></div>
 <div class="spacer"></div>
-
-<!-- <script>
-	document.addEventListener('DOMContentLoaded', function () {
-		fetch('http://ip-api.com/json')
-			.then(response => response.json())
-			.then(data => {
-				const orderLink = document.getElementById('order-link');
-				if (data.countryCode === 'CA') {
-					orderLink.href = '#cad';
-				} else {
-					orderLink.href = '#usd';
-				}
-			})
-			.catch(error => {
-				console.error('Error fetching IP data:', error);
-				// Fallback href in case of an error
-				document.getElementById('order-link').href = '#usd';
-			});
-	});
-</script> -->
 
 </body>
 </html>
